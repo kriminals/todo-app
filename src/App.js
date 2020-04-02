@@ -19,9 +19,9 @@ function TaskForm({ addTask }) {
   const [value, setValue] = useState("Add a task");
   const handleClick = event => {
     event.preventDefault();
-    setValue("");
     if (!value) return;
     addTask(value);
+    setValue("");
   };
 
   const handleChange = event => setValue(event.target.value);
